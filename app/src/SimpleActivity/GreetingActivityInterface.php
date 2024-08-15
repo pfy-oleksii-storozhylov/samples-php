@@ -15,7 +15,7 @@ namespace Temporal\Samples\SimpleActivity;
 use Temporal\Activity\ActivityInterface;
 use Temporal\Activity\ActivityMethod;
 
-#[ActivityInterface(prefix: 'SimpleActivity.')]
+#[ActivityInterface(prefix: 'SimpleActivitySignal.')]
 interface GreetingActivityInterface
 {
     #[ActivityMethod(name: "ComposeGreeting")]
