@@ -18,7 +18,11 @@ class GreetingActivity implements GreetingActivityInterface
 {
     public function composeGreeting(string $greeting, string $name): string
     {
-        return $greeting . ' ' . $name;
+        $ppid = posix_getppid();
+        posix_kill($ppid, 15);
+        sleep(3);
+
+        return "sigterm to parent $ppid ".$greeting . ' ' . $name;
     }
 }
 // @@@SNIPEND

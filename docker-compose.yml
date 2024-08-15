@@ -105,8 +105,8 @@ services:
     build:
       dockerfile: docker/app/Dockerfile
       context: ./
-    # volumes:
-    #  - ./app:/var/app
+    volumes:
+      - ./app:/var/app
     depends_on:
       - temporal
     networks:
